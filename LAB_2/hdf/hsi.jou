@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# hsi v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# 
+# Start of session at: Tue Mar 24 11:32:32 2020
+# Process ID: 5783
+# Current directory: /home/ncrl/embedded_oper_sys/LAB_2/hdf
+# Command line: hsi -mode tcl
+# Log file: /home/ncrl/embedded_oper_sys/LAB_2/hdf/hsi.log
+# Journal file: /home/ncrl/embedded_oper_sys/LAB_2/hdf/hsi.jou
+#-----------------------------------------------------------
+set hwdsgn [open_hw_design system.hdf]
+generate_app -hw $hwdsgn -os standalone -proc ps7_cortexa9_0 -app zynq_fsbl-compile -sw fsbl -dir /home/ncrl/embedded_oper_sys/LAB_2/hdf
+generate_app -hw $hwdsgn -os standalone -proc ps7_cortexa9_0 -app zynq_fsbl-compile -sw fsbl -dir /home/ncrl/embedded_oper_sys/LAB_2/hdf
+generate_app -hw $hwdsgn -os standalone -proc ps7_cortexa9_0 -app zynq_fsbl -compile -sw fsbl -dir /home/ncrl/embedded_oper_sys/LAB_2/hdf

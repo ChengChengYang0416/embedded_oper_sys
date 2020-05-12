@@ -1,0 +1,38 @@
+#
+# Multifunction miscellaneous devices
+#
+
+menu "Multimedia Capabilities Port drivers"
+
+config MCP
+	tristate 
+
+# Interface drivers
+config MCP_SA11X0
+	tristate "Support SA11x0 MCP interface"
+	depends on ARCH_SA1100
+	select MCP
+
+# Chip drivers
+config MCP_UCB1200
+	tristate "Support for UCB1200 / UCB1300"
+	depends on MCP
+
+config MCP_UCB1200_TS
+	tristate "Touchscreen interface support"
+	depends on MCP_UCB1200 && INPUT
+
+endmenu
+
+config UCB1400
+	tristate 
+
+config UCB1400_TS
+	tristate "UCB1400 Touchscreen support"
+#	depends on ARCH_LUBBOCK || MACH_MAINSTONE || MACH_COLIBRI
+	select UCB1400
+	select SND_AC97_BUS
+	depends on ARCH_LUBBOCK || MACH_MAINSTONE || MACH_CREATOR_PXA270
+
+
+

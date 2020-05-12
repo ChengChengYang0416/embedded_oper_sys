@@ -1,0 +1,1 @@
+cmd_/home/ncrl/embedded_oper_sys/LAB_4/driver/src/mydev.ko := arm-linux-gnueabihf-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /home/ncrl/embedded_oper_sys/LAB_4/driver/src/mydev.ko /home/ncrl/embedded_oper_sys/LAB_4/driver/src/mydev.o /home/ncrl/embedded_oper_sys/LAB_4/driver/src/mydev.mod.o ;  true

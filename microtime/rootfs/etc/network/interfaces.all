@@ -1,0 +1,17 @@
+#auto lo eth0 rausb0 
+auto lo eth0 wlan0
+
+iface lo inet loopback
+
+iface eth0 inet static
+      address 192.168.1.1
+      network 192.168.1.0
+      netmask 255.255.255.0
+      broadcast 192.168.1.255
+      gateway 192.168.1.1
+
+iface rausb0 inet dhcp
+     pre-up /etc/network/prepare_wireless.sh
+
+iface wlan0 inet dhcp
+     pre-up /etc/network/prepare_wireless1.sh

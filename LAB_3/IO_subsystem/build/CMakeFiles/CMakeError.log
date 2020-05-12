@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/ncrl/embedded_oper_sys/LAB_3/IO_subsystem/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_23509/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_23509.dir/build.make CMakeFiles/cmTC_23509.dir/build
+gmake[1]: Entering directory '/home/ncrl/embedded_oper_sys/LAB_3/IO_subsystem/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_23509.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_23509.dir/CheckSymbolExists.c.o   -c /home/ncrl/embedded_oper_sys/LAB_3/IO_subsystem/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_23509
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_23509.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_23509.dir/CheckSymbolExists.c.o  -o cmTC_23509 -rdynamic 
+CMakeFiles/cmTC_23509.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_23509.dir/build.make:97: recipe for target 'cmTC_23509' failed
+gmake[1]: *** [cmTC_23509] Error 1
+gmake[1]: Leaving directory '/home/ncrl/embedded_oper_sys/LAB_3/IO_subsystem/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_23509/fast' failed
+gmake: *** [cmTC_23509/fast] Error 2
+
+File /home/ncrl/embedded_oper_sys/LAB_3/IO_subsystem/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/ncrl/embedded_oper_sys/LAB_3/IO_subsystem/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_021c5/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_021c5.dir/build.make CMakeFiles/cmTC_021c5.dir/build
+gmake[1]: Entering directory '/home/ncrl/embedded_oper_sys/LAB_3/IO_subsystem/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_021c5.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_021c5.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_021c5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_021c5.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_021c5.dir/CheckFunctionExists.c.o  -o cmTC_021c5 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_021c5.dir/build.make:97: recipe for target 'cmTC_021c5' failed
+gmake[1]: *** [cmTC_021c5] Error 1
+gmake[1]: Leaving directory '/home/ncrl/embedded_oper_sys/LAB_3/IO_subsystem/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_021c5/fast' failed
+gmake: *** [cmTC_021c5/fast] Error 2
+
+

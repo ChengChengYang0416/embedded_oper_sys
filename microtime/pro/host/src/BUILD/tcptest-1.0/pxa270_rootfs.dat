@@ -1,0 +1,4 @@
+#
+# 1.copy param 2.delete param 3.source directory 4.destinatin directory
+vf f   ../pro/host/src/BUILD/tcptest-1.0/client    ../rootfs/opt/microtime/tcptest/client
+vf f   ../pro/host/src/BUILD/tcptest-1.0/server    ../rootfs/opt/microtime/tcptest/server

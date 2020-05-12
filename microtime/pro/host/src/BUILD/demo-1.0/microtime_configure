@@ -1,0 +1,3 @@
+export CC=arm-unknown-linux-gnu-gcc
+export STRIP=arm-unknown-linux-gnu-strip
+make

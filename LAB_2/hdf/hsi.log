@@ -1,0 +1,140 @@
+#-----------------------------------------------------------
+# hsi v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# 
+# Start of session at: Tue Mar 24 11:32:32 2020
+# Process ID: 5783
+# Current directory: /home/ncrl/embedded_oper_sys/LAB_2/hdf
+# Command line: hsi -mode tcl
+# Log file: /home/ncrl/embedded_oper_sys/LAB_2/hdf/hsi.log
+# Journal file: /home/ncrl/embedded_oper_sys/LAB_2/hdf/hsi.jou
+#-----------------------------------------------------------
+set hwdsgn [open_hw_design system.hdf]
+INFO: [Hsi 55-1698] elapsed time for repository loading 2 seconds
+open_hw_design: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 773.488 ; gain = 130.016 ; free physical = 4505 ; free virtual = 8265
+zc702_wrapper
+generate_app -hw $hwdsgn -os standalone -proc ps7_cortexa9_0 -app zynq_fsbl-compile -sw fsbl -dir /home/ncrl/embedded_oper_sys/LAB_2/hdf
+ERROR: [Hsi 55-1414] App zynq_fsbl-compile is not Found in repositories
+ERROR: [Hsi 55-1414] App zynq_fsbl-compile is not Found in repositories
+ERROR: [Hsi 55-1450] Error: running generate_bsp.
+ERROR: [Hsi 55-1558] Software Design /system is not found
+ERROR: [Common 17-39] 'generate_app' failed due to earlier errors.
+generate_app -hw $hwdsgn -os standalone -proc ps7_cortexa9_0 -app zynq_fsbl-compile -sw fsbl -dir /home/ncrl/embedded_oper_sys/LAB_2/hdf
+ERROR: [Hsi 55-1414] App zynq_fsbl-compile is not Found in repositories
+ERROR: [Hsi 55-1414] App zynq_fsbl-compile is not Found in repositories
+ERROR: [Hsi 55-1450] Error: running generate_bsp.
+ERROR: [Hsi 55-1558] Software Design /system is not found
+ERROR: [Common 17-39] 'generate_app' failed due to earlier errors.
+ERROR: [Hsi 55-1414] App zynq_fsbl-compile is not Found in repositories
+ERROR: [Hsi 55-1414] App zynq_fsbl-compile is not Found in repositories
+ERROR: [Hsi 55-1450] Error: running generate_bsp.
+ERROR: [Hsi 55-1558] Software Design /system is not found
+ERROR: [Common 17-39] 'generate_app' failed due to earlier errors.
+generate_app -hw $hwdsgn -os standalone -proc ps7_cortexa9_0 -app zynq_fsbl -compile -sw fsbl -dir /home/ncrl/embedded_oper_sys/LAB_2/hdf
+Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src
+Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_6/src
+Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_8/src
+Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_4/src
+Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src
+Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_8/src
+Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_7/src
+Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_5/src
+Running Make include in ps7_cortexa9_0/libsrc/xilrsa_v1_5/src
+Running Make include in ps7_cortexa9_0/libsrc/xilffs_v4_0/src
+Running Make include in ps7_cortexa9_0/libsrc/iicps_v3_8/src
+Running Make include in ps7_cortexa9_0/libsrc/canps_v3_2/src
+Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_10/src
+Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_3/src
+Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src
+Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_3/src
+Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src
+Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_7/src
+Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src
+Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src
+Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
+Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_4/src
+Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src
+Compiling ddrps
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_6/src
+Compiling sdps
+Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_8/src
+Compiling standalone
+In file included from xtime_l.c:49:0:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from sleep.c:53:0:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xil_sleeptimer.c:51:0:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from usleep.c:56:0:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_4/src
+Compiling dmaps
+Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src
+Compiling cpu_cortexa9
+Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_8/src
+Compiling emacps
+Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_7/src
+Compiling ttcps
+Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_5/src
+Compiling qspips
+Running Make libs in ps7_cortexa9_0/libsrc/xilrsa_v1_5/src
+Running Make libs in ps7_cortexa9_0/libsrc/xilffs_v4_0/src
+Compiling XilFFs Library
+Running Make libs in ps7_cortexa9_0/libsrc/iicps_v3_8/src
+Compiling iicps
+Running Make libs in ps7_cortexa9_0/libsrc/canps_v3_2/src
+Compiling canps
+Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_10/src
+Compiling scugic
+Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_3/src
+Compiling xadcps
+Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src
+Compiling devcfg
+Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_3/src
+Compiling gpio
+Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src
+Compiling scuwdt
+Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_7/src
+Compiling uartps
+Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src
+Compiling usbps
+Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src
+Compiling coresightps_dcc
+Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
+Compiling scutimer
+Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_4/src
+Compiling gpiops
+Finished building libraries
+arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -c pcap.c -o pcap.o -Izynq_fsbl_bsp/ps7_cortexa9_0/include -I.
+In file included from pcap.c:100:0:
+zynq_fsbl_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -c ps7_init.c -o ps7_init.o -Izynq_fsbl_bsp/ps7_cortexa9_0/include -I.
+arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -c qspi.c -o qspi.o -Izynq_fsbl_bsp/ps7_cortexa9_0/include -I.
+arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -c rsa.c -o rsa.o -Izynq_fsbl_bsp/ps7_cortexa9_0/include -I.
+arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -c main.c -o main.o -Izynq_fsbl_bsp/ps7_cortexa9_0/include -I.
+In file included from main.c:137:0:
+zynq_fsbl_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -c md5.c -o md5.o -Izynq_fsbl_bsp/ps7_cortexa9_0/include -I.
+arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -c image_mover.c -o image_mover.o -Izynq_fsbl_bsp/ps7_cortexa9_0/include -I.
+arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -c nor.c -o nor.o -Izynq_fsbl_bsp/ps7_cortexa9_0/include -I.
+arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -c nand.c -o nand.o -Izynq_fsbl_bsp/ps7_cortexa9_0/include -I.
+arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -c fsbl_hooks.c -o fsbl_hooks.o -Izynq_fsbl_bsp/ps7_cortexa9_0/include -I.
+arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -c sd.c -o sd.o -Izynq_fsbl_bsp/ps7_cortexa9_0/include -I.
+arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -c fsbl_handoff.S -o fsbl_handoff.o -Izynq_fsbl_bsp/ps7_cortexa9_0/include -I.
+arm-none-eabi-gcc -o executable.elf  pcap.o  ps7_init.o  qspi.o  rsa.o  main.o  md5.o  image_mover.o  nor.o  nand.o  fsbl_hooks.o  sd.o  fsbl_handoff.o  -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec  -lrsa -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lrsa,-lxil,-lgcc,-lc,--end-group  -Wl,--gc-sections -Lzynq_fsbl_bsp/ps7_cortexa9_0/lib -L./ -Tlscript.ld
+generate_app: Time (s): cpu = 00:00:10 ; elapsed = 00:00:18 . Memory (MB): peak = 837.488 ; gain = 64.000 ; free physical = 4420 ; free virtual = 8236
+exit
+INFO: [Common 17-206] Exiting hsi at Tue Mar 24 11:38:39 2020...

@@ -1,0 +1,56 @@
+#! /bin/sh
+
+# /etc/init.d/thttpd - thttpd's init script.
+# Written by Yotam Rubin <yotam@makif.omer.k12.il>
+#
+# chkconfig: 2345 20 20
+#
+. /etc/init.d/functions
+set -e
+
+INIT=/etc/init.d/thttpd
+CONFFILE=/etc/thttpd.conf
+
+if [ ! -f $CONFFILE ]; then
+    exit 1
+fi
+
+NETSTAT=/bin/netstat
+DAEMON=/usr/sbin/thttpd
+NAME=thttpd
+PIDFILE=/var/run/thttpd.pid
+PORT=`grep port= $CONFFILE | sed 's/port=//'`
+
+test -x $DAEMON || exit 0
+
+case "$1" in
+  start)
+    echo -n "Starting web server"
+	$DAEMON -C $CONFFILE -i $PIDFILE
+    echo "."
+    ;;
+  stop)
+    echo -n "Stopping web server"
+    find_pidfile_kill $PIDFILE
+      ;;
+  restart)
+    echo -n "Restarting web server: "
+    $INIT stop 2>&1 > /dev/null
+    $INIT start 2>&1 > /dev/null   
+    echo "$NAME. "
+    ;;
+  force-reload)
+   echo -n "Reloading thttpd configuration files: "
+    $INIT stop 2>&1 > /dev/null
+    $INIT start 2>&1 > /dev/null
+    echo "$NAME. "
+    ;;
+  force-reload)
+   ;;
+  *)
+    echo "Usage: /etc/init.d/$NAME {force-reload|start|stop|restart}"
+    exit 1
+    ;;
+esac
+
+exit 0

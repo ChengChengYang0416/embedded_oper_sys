@@ -1,0 +1,103 @@
+#! /bin/sh
+#
+# devfsd		This script handles the devfs startup, so that
+#			permissions are set correctly and device symlinks
+#			are available.
+#
+# chkconfig: 2345 11 89
+#
+
+[ -e /dev/.devfsd ] || exit 0
+[ -x /sbin/devfsd ] || exit 0
+
+PATH=/bin:/usr/bin:/sbin:/usr/sbin
+export PATH
+# skip files ending in ~ (backups) and files containing ".dpkg-" (files created
+# by dpkg in the process of upgrades).
+if [ -f /etc/devfs/symlinks.list ]; then
+  LINKFILES=`grep -v ^# /etc/devfs/symlinks.list 2>/dev/null`
+fi
+if [ -f /etc/devfs/devices.list ]; then
+  DEVFILES=`grep -v ^# /etc/devfs/devices.list 2>/dev/null`
+fi
+
+case "$1" in
+  start)
+	## set up symlinks
+	cd /dev
+	if [ "$LINKFILES" != "" ]; then
+		echo ""
+		echo "/etc/devfs/symlinks and /etc/devfs/symlinks.d/* use is deprecated."
+		echo "It will be removed in a future version."
+		echo "See devfsd(8) for how to achieve the same objectives more effectively"
+		echo "through /etc/devfs/devfsd.conf, or ask russell@coker.com.au for advice."
+		echo ""
+		echo -n "Setting up symlinks in /dev..."
+		OLDIFS="$IFS"
+		IFS='\'
+		for i in `sed -e '/^#/d' $LINKFILES 2>/dev/null`; do
+			IFS="$OLDIFS"
+			eval set -- $i
+			[ -e $2 ] && continue
+			ln -sf $1 $2
+		done
+		echo "done.    "
+	fi
+	if [ -n "$DEVFILES" ]; then
+	echo -n "Creating extra device nodes..."
+	OLDIFS="$IFS"
+	IFS='\'
+	for i in `sed -e '/^#/d' $DEVFILES 2>/dev/null`; do
+		IFS="$OLDIFS"
+		eval set -- $i
+		[ -e $1 ] && continue
+		mknod $1 $2 $3 $4
+		if [ "$5.$6" != "." ]; then
+			chown $5.$6 $1
+		fi
+		if [ "$7" != "" ]; then
+			chmod $7 $1
+		fi
+	echo "done."
+	done
+	fi
+	echo -n "Starting devfsd: "
+	if [ ! -e /proc/stat ]; then
+		/sbin/devfsd /dev
+	else
+		start-stop-daemon --start --exec /sbin/devfsd -- /dev
+	fi
+	echo "done.  "
+	;;
+  stop)
+	echo -n "Stopping devfsd: "
+	start-stop-daemon --stop --quiet --exec /sbin/devfsd || kill `pidof /sbin/devfsd` 2> /dev/null
+	echo -n "done."
+	cd /dev
+	if [ "$LINKFILES" != "" ]; then
+		echo -n "  Removing symlinks..."
+		OLDIFS="$IFS"
+		IFS='\
+'
+		for i in `sed -e '/^#/d' $LINKFILES 2>/dev/null`; do
+			IFS="$OLDIFS"
+			eval set -- $i
+			[ ! -L $2 ] && continue
+			rm $2
+		done
+		echo "done."
+	fi
+	echo ""
+	;;
+  restart|force-reload)
+	$0 stop
+	sleep 1
+	$0 start
+	;;
+  *)
+	echo "Usage: /etc/init.d/devfsd {start|stop|restart|force-reload}" >&2
+	exit 1
+	;;
+esac
+
+exit 0

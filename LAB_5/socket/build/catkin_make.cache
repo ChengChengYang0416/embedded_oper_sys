@@ -1,0 +1,2 @@
+
+-G CodeBlocks - Unix Makefiles -DCATKIN_DEVEL_PREFIX=/home/ncrl/embedded_oper_sys/LAB_5/socket/devel -DCMAKE_INSTALL_PREFIX=/home/ncrl/embedded_oper_sys/LAB_5/socket/install

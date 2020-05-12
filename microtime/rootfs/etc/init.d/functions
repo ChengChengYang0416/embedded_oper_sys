@@ -1,0 +1,18 @@
+find_pid_kill()
+{
+    pid=$(ps |grep "$1"|sed '/grep/d' |sed 's/  */ /g'|cut -d ' ' -f$2)
+    if [ "$?" = "0" ] ; then
+          echo -n "stopping pid($pid)" ;kill -9 $pid
+          echo ""
+    fi
+}
+
+find_pidfile_kill()
+{
+     count=$(ps|grep `cat $1`|sed '/grep/d')
+     if [ "$?" = "0" ] ; then
+          echo -n "stopping pid($(cat $1))" ;kill -9 `cat $1`
+	  echo ""
+     fi
+     rm -f $1
+}

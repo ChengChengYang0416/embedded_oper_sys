@@ -1,0 +1,34 @@
+# /etc/modules: kernel modules to load at boot time.
+#
+# This file should contain the names of kernel modules that are
+# to be loaded at boot time, one per line.  Comments begin with
+# a `#', and everything on the line after them are ignored.
+#creator-pxa270-dsp-5502
+#creator-pxa270-gprs
+#creator-pxa270-lcd
+#creator-pxa270-cmos
+#creator-pxa270-codec
+#creator-pxa270-fpga-ep1c6-loader
+#creator-pxa270-fpga-ep1c6-a2d
+#creator-pxa270-ide
+#rt2570
+#rt73
+#rt73-1
+#spca5xx debug=0 force_rgb=1 
+#uvcvideo 
+cfbcopyarea
+cfbfillrect
+cfbimgblt
+#pxafb lcdtype=MTLCD-0283224
+#pxafb lcdtype=MTLCD-0353224
+#pxafb lcdtype=MTLCD-0353224A
+pxafb lcdtype=MTLCD-0708048
+#pxafb lcdtype=MTLCD-1046448
+mcp-ac97        
+ucb1x00-core
+#ucb1x00-ts lcdtype=MTLCD-0283224
+#ucb1x00-ts lcdtype=MTLCD-0353224
+#ucb1x00-ts lcdtype=MTLCD-0353224A
+ucb1x00-ts lcdtype=MTLCD-0708048
+#ucb1x00-ts lcdtype=MTLCD-1046448
+
