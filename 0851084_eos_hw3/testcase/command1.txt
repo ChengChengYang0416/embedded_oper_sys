@@ -1,0 +1,6 @@
+0,1,login F144839863
+1,1,buy S1 1 1 1 1
+2,1,logout
+3,1,login A117188556
+4,1,buy S1 2 1 1 1
+5,1,logout

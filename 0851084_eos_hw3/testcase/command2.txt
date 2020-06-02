@@ -1,0 +1,220 @@
+0,1,login F144839863
+1,1,buy S1 1 1 1 1
+2,1,logout
+3,1,login A117188556
+4,1,buy S1 2 1 1 1
+5,1,logout
+6,1,login G132796381
+7,1,buy S1 3 1 1 1
+8,1,logout
+9,1,login B174959258
+10,1,buy S1 4 1 1 1
+11,1,logout
+12,1,login H288868017
+13,1,buy S1 5 1 1 1
+14,1,logout
+15,1,login C124442496
+16,1,buy S1 1 1 1 1
+17,1,logout
+18,1,login D127578896
+19,1,buy S1 2 1 1 1
+20,1,logout
+21,1,login F144839863
+22,1,buy S1 3 1 1 1
+23,1,logout
+24,1,login A117188556
+25,1,buy S1 4 1 1 1
+26,1,logout
+27,1,login G132796381
+28,1,buy S1 5 1 1 1
+29,1,logout
+30,1,login B174959258
+31,1,buy S1 1 1 1 1
+32,1,logout
+33,1,login H288868017
+34,1,buy S1 2 1 1 1
+35,1,logout
+36,1,login C124442496
+37,1,buy S1 3 1 1 1
+38,1,logout
+39,1,login D127578896
+40,1,buy S1 4 1 1 1
+41,1,logout
+42,1,login F144839863
+43,1,buy S1 5 1 1 1
+44,1,logout
+45,1,login A117188556
+46,1,buy S1 1 1 1 1
+47,1,logout
+48,1,login G132796381
+49,1,buy S1 2 1 1 1
+50,1,logout
+51,1,login B174959258
+52,1,buy S1 3 1 1 1
+53,1,logout
+54,1,login H288868017
+55,1,buy S1 4 1 1 1
+56,1,logout
+57,1,login C124442496
+58,1,buy S1 5 1 1 1
+59,1,logout
+60,2,login E165814285
+61,2,buy S1 1 1 1 1
+62,2,logout
+63,2,login J161621706
+64,2,buy S1 2 1 1 1
+65,2,logout
+66,2,login L157449751
+67,2,buy S1 3 1 1 1
+68,2,logout
+69,2,login K164296902
+70,2,buy S1 4 1 1 1
+71,2,logout
+72,2,login W186714857
+73,2,buy S1 5 1 1 1
+74,2,logout
+75,2,login M129448656
+76,2,buy S1 1 1 1 1
+77,2,logout
+78,2,login N177233546
+79,2,buy S1 2 1 1 1
+80,2,logout
+81,2,login E165814285
+82,2,buy S1 3 1 1 1
+83,2,logout
+84,2,login J161621706
+85,2,buy S1 4 1 1 1
+86,2,logout
+87,2,login L157449751
+88,2,buy S1 5 1 1 1
+89,2,logout
+90,2,login K164296902
+91,2,buy S1 1 1 1 1
+92,2,logout
+93,2,login W186714857
+94,2,buy S1 2 1 1 1
+95,2,logout
+96,2,login M129448656
+97,2,buy S1 3 1 1 1
+98,2,logout
+99,2,login N177233546
+100,2,buy S1 4 1 1 1
+101,2,logout
+102,2,login E165814285
+103,2,buy S1 5 1 1 1
+104,2,logout
+105,2,login J161621706
+106,2,buy S1 1 1 1 1
+107,2,logout
+108,2,login L157449751
+109,2,buy S1 2 1 1 1
+110,2,logout
+111,2,login K164296902
+112,2,buy S1 3 1 1 1
+113,2,logout
+114,2,login W186714857
+115,2,buy S1 4 1 1 1
+116,2,logout
+117,2,login M129448656
+118,2,buy S1 5 1 1 1
+119,2,logout
+120,12,logout
+121,13,login P149589598
+122,14,statics
+123,15,logout
+124,16,statics
+125,17,logout
+126,18,login S142039712
+127,9,show
+128,20,statics
+129,21,statics
+130,12,login Z196589652
+131,13,logout
+132,14,login I169747354
+133,15,logout
+134,16,logout
+135,17,login P149589598
+136,18,show
+137,19,login Q119678958
+138,20,show
+139,21,show
+140,12,logout
+141,23,show
+142,14,logout
+143,15,statics
+144,16,login Z196589652
+145,17,login O176202085
+146,18,login I169747354
+147,19,logout
+148,20,logout
+149,21,logout
+150,12,statics
+151,13,login Q119678958
+152,14,login A123456789
+153,15,login R167761572
+154,16,statics
+155,17,logout
+156,18,statics
+157,11,show
+158,20,logout
+159,21,login O176202085
+160,12,statics
+161,13,statics
+162,14,statics
+163,15,logout
+164,18,show
+165,17,statics
+166,18,login A123456789
+167,21,show
+168,20,logout
+169,21,login T173532954
+170,12,statics
+171,13,login Y191108548
+172,14,logout
+173,27,show
+174,28,show
+175,17,statics
+176,18,login U171830029
+177,19,login P149589598
+178,4,show
+179,21,statics
+180,12,statics
+181,13,statics
+182,8,show
+183,15,logout
+184,10,show
+185,17,statics
+186,18,login Z196589652
+187,19,statics
+188,20,statics
+189,21,statics
+190,16,show
+191,13,logout
+192,14,login V155914441
+193,15,statics
+194,16,login A123456789
+195,17,logout
+196,18,login S142039712
+197,23,show
+198,20,logout
+199,21,login Y191108548
+200,12,logout
+201,27,show
+202,28,show
+203,15,login K122872742
+204,2,show
+205,3,show
+206,18,logout
+207,19,logout
+208,20,login A123456789
+209,21,logout
+210,8,show
+211,9,show
+212,10,show
+213,11,show
+214,16,logout
+215,13,show
+216,18,login I169747354
+217,19,login K122872742
+218,20,login U171830029
+219,21,logout
